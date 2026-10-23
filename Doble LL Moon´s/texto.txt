@@ -1,0 +1,185 @@
+
+/* ===== CONFIGURACIÓN GENERAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #f8f1ed;
+    color: #4b1728;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* ===== ENCABEZADO DELGADO ===== */
+.encabezado {
+    width: 100%;
+    min-height: 95px;
+    padding: 8px 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: #5b1829;
+    box-shadow: 0 3px 10px rgba(55, 15, 28, 0.15);
+}
+
+/* ===== LOGO CIRCULAR ===== */
+.Logo {
+    display: block;
+    width: 78px;
+    height: 78px;
+    flex: 0 0 78px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 50%;
+    border: 2px solid #c7a16a;
+    background-color: #f8f1ed;
+    padding: 2px;
+    margin: 0;
+}
+
+/* ===== MENÚ DE NAVEGACIÓN ===== */
+.contenidos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px 25px;
+    margin: 0;
+}
+
+.contenidos a {
+    color: #fff7ef;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 6px 0;
+    transition: color 0.3s ease;
+}
+
+.contenidos a:hover {
+    color: #e5c18d;
+}
+
+/* ===== FORMULARIO DE CONTACTO ===== */
+main {
+    width: calc(100% - 30px);
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 35px 40px;
+    background-color: #fffaf6;
+    border: 1px solid #ead8d0;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(91, 24, 41, 0.10);
+}
+
+h1 {
+    text-align: center;
+    color: #5b1829;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 75px;
+    height: 3px;
+    background-color: #c49a72;
+    margin: 12px auto 0;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #67283a;
+    margin-top: 8px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d9bfc4;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #4b1728;
+    font-family: inherit;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #7d2942;
+    box-shadow: 0 0 0 3px rgba(125, 41, 66, 0.12);
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+button {
+    margin-top: 15px;
+    padding: 13px 24px;
+    background-color: #5b1829;
+    color: #fffaf6;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #87364f;
+}
+
+/* ===== ADAPTACIÓN A CELULARES ===== */
+@media (max-width: 600px) {
+    .encabezado {
+        flex-direction: column;
+        min-height: auto;
+        padding: 12px 15px;
+        gap: 12px;
+    }
+
+    .Logo {
+        width: 70px;
+        height: 70px;
+        flex-basis: 70px;
+    }
+
+    .contenidos {
+        justify-content: center;
+        gap: 8px 16px;
+    }
+
+    .contenidos a {
+        font-size: 14px;
+    }
+
+    main {
+        margin: 25px auto;
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
